@@ -27,6 +27,23 @@ body {
     font-weight: 400;
     line-height: 1.75;
     color: #ffffff;
+
+/*    display: grid;*/
+    /*    grid-template-rows: 1fr;*/
+    /*    grid-template-rows: repeat(11, 20vh);*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas: 
+        "branding . . nav nav"
+        "project-1 project-1 project-1 project-1 project-1"
+        ". project-2 project-2 project-2 project-2"
+        ". . project-3 project-3 project-3"
+        "project-4 project-4 project-4 project-4 project-4"
+        "project-5 project-5 project-5 project-5 project-5"
+        "project-6 project-6 project-6 project-6 project-6";
+
 }
 
 /* Typography Styles */
@@ -73,9 +90,10 @@ small,
 }
 
 .wrapper {
-    display: flex;
+    /*    display: flex;*/
 }
 
+/*
 .box-1 {
     width: 50%;
     background-color: hotpink;
@@ -87,25 +105,32 @@ small,
     background-color: lightblue;
     padding: 3em;
 }
+*/
 
 /* Header Styles */
+/*
 .header {
     display: flex;
 }
+*/
 
 .branding {
     padding: 1.5em;
-    width: 10%;
+    width: 50%;
+    grid-area: branding;
 }
 
 .nav {
     background-color: lightcoral;
     padding: 1em;
-    width: 90%;
-    display: flex;
+    grid-area: nav;
+    /*    width: 50%;*/
+    /*
+        display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+*/
 }
 
 .nav-item {
@@ -114,6 +139,7 @@ small,
     color: lightcoral;
 }
 
+/*
 .project {
     border: 1px dashed white;
     width: 33.3333%;
@@ -123,19 +149,52 @@ small,
     align-items: center;
     padding: 2em;
 }
+*/
 
+/*
 .project-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+*/
 
 .quarantini {
-    margin-left: 3em;
+    /*    margin-left: 3em;*/
     background-color: darkcyan;
 }
 
 .introdeuce {
-    margin-top: 3em;
+    /*    margin-top: 3em;*/
     background-color: darkcyan;
+}
+
+.project-1 {
+    background-color: darkred;
+    grid-area: project-1;
+}
+
+.project-2 {
+    background-color: darkcyan;
+    grid-area: project-2;
+}
+
+.project-3 {
+    background-color: dodgerblue;
+    grid-area: project-3;
+}
+
+.project-4 {
+    background-color: cadetblue;
+    grid-area: project-4;
+}
+
+.project-5 {
+    background-color: darkblue;
+    grid-area: project-5;
+}
+
+.project-6 {
+    background-color: skyblue;
+    grid-area: project-6;
 }
